@@ -19,19 +19,18 @@ vector <int> Insertion_Sort(vector <int> arr, int n)
         arr[i+1] = key;
  
     }*/
-     int i, key, j;
-    for (i = 1; i < n; i++)
+    for(int i = 1; i < n; i++)
     {
-        key = arr[i];
-        j = i - 1;
-        while (j >= 0 && arr[j] > key)
+        int key =  arr[i];
+        int p = i - 1;
+        while( p >= 0 && arr[p] > key)
         {
-            arr[j + 1] = arr[j];
-            j = j - 1;
+            arr[p+1] = arr[p];
+            p--;
         }
-        arr[j + 1] = key;
-    }
 
+        arr[p+1] = key;
+    }
     return arr;
 }
 
